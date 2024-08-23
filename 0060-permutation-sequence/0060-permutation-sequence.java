@@ -18,6 +18,7 @@ class Solution {
                 freq[i-1]=true;
                 permutation.append(String.valueOf(i));
                 kthpermutation(n,k,freq,result,permutation);
+                if(k[0]==0) return;
                 freq[i-1]=false;
                 permutation.deleteCharAt(permutation.length()-1);
             }
