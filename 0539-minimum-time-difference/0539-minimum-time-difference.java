@@ -3,9 +3,8 @@ class Solution {
         List<Integer> times=new ArrayList<>();
         for(String s:timePoints){
             int time=0;
-            String[] strarr=s.split(":");
-            time=Integer.parseInt(strarr[0])*60;
-            time+=Integer.parseInt(strarr[1]);
+            time=Integer.parseInt(s.substring(0,2))*60;
+            time+=Integer.parseInt(s.substring(3));
             times.add(time);
         }
         Collections.sort(times);
