@@ -17,10 +17,10 @@ class MyStack {
     
     public int top() {
         for(int i=0;i<queue.size()-1;i++){
-            queue.offer(queue.pop());
+            queue.offer(queue.poll());
         }
         int topElement=queue.peek();
-        queue.offer(queue.pop());
+        queue.offer(queue.poll());
         return topElement;
     }
     
