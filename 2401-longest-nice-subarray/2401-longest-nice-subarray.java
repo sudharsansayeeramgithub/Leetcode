@@ -2,7 +2,7 @@ class Solution {
     public int longestNiceSubarray(int[] nums) {
         int ans=0,used=0;
         for(int l=0,r=0;r<nums.length;r++){
-            while((used & nums[r]>0)){
+            while((used & nums[r])>0){
                 used^=nums[l++];
             }
             used|=nums[r];
