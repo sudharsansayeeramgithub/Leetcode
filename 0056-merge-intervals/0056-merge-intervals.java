@@ -9,12 +9,11 @@ class Solution {
                 prevEnd=Math.max(end,prevEnd);
             }else{
                 mergedIntervals.add(new int[]{prevStart,prevEnd});
-                prevEnd=Math.max(end,prevEnd);
+                prevEnd=end;
                 prevStart=start;
             }
         }
         mergedIntervals.add(new int[]{prevStart,prevEnd});
-        int[][] result=mergedIntervals.toArray(new int[mergedIntervals.size()][]);
-        return result;
+        return mergedIntervals.toArray(new int[mergedIntervals.size()][]);
     }
 }
